@@ -17,9 +17,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $ldap->bind();
         $entrada='uid='.$_POST['usr'].',ou='.$_POST['ou'].',dc=fjeclot,dc=net';
         $usuari=$ldap->getEntry($entrada);
-        echo "<b><u>".$usuari["dn"]."</b></u><br>";
-        foreach ($usuari as $atribut => $dada) {
-            if ($atribut != "dn") echo $atribut.": ".$dada[0].'<br>';
+        if(isset($usuari)){
+            echo "<b><u>".$usuari["dn"]."</b></u><br>";
+            foreach ($usuari as $atribut => $dada) {
+                if ($atribut != "dn") echo $atribut.": ".$dada[0].'<br>';
+            }
+        }else{
+            echo "<b>No s'ha trobat l'usuari</b>";
         }
     }
 }
