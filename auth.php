@@ -30,6 +30,6 @@
 		</title>
 	</head>
 	<body>
-		<a href="http://zend-patulo.fjeclot.net/autent/index.php">Torna a la pàgina inicial</a>
+		<a href="http://zend-patulo.fjeclot.net/projecte/index.php">Torna a la pàgina inicial</a>
 	</body>
 </html>

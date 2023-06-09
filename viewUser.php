@@ -32,12 +32,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     </head>
     <body>
         <h2>Formulari de selecció d'usuari</h2>
-        <form action="http://zend-patulo.fjeclot.net/zendldap" method="POST">
+        <form action="http://zend-patulo.fjeclot.net/projecte/viewUser.php" method="POST">
             Unitat organitzativa: <input type="text" name="ou"><br>
             Usuari: <input type="text" name="usr"><br>
             <input type="submit"/>
             <input type="reset"/>
         </form>
-        <a href="http://zend-patulo.fjeclot.net/autent/menu.php">Torna a la pàgina inicial</a>
+        <a href="http://zend-patulo.fjeclot.net/projecte/menu.php">Torna a la pàgina inicial</a>
     </body>
 </html>

@@ -7,7 +7,7 @@
 	<body>
 		<h2> MENÚ PRINCIPAL DE L'APLICACIÓ D'ACCÉS A BASES DE DADES LDAP</h2>
 		<h3> <b>En construcció!!!!!!!!!!!</b> </h3>
-		<a href="http://zend-patulo.fjeclot.net/autent/viewUser.php">Ver usuario</a>
-		<a href="http://zend-patulo.fjeclot.net/autent/index.php">Torna a la pàgina inicial</a>
+		<a href="http://zend-patulo.fjeclot.net/projecte/viewUser.php">Ver usuario</a>
+		<a href="http://zend-patulo.fjeclot.net/projecte/index.php">Torna a la pàgina inicial</a>
 	</body>
 </html>

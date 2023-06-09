@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		</title>
 	</head>
 	<body>
-		<form action="http://zend-patulo.fjeclot.net/autent/addUser.php" method="POST">
+		<form action="http://zend-patulo.fjeclot.net/projecte/addUser.php" method="POST">
 			 <label for="uid">UID:</label>
              <input type="text" name="uid" id="uid" required>
              <label for="unorg">Unitat organitzativa:</label>
