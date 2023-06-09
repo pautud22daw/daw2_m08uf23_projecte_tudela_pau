@@ -1,13 +1,13 @@
 <?php
 require 'vendor/autoload.php';
 use Laminas\Ldap\Ldap;
-ini_set('display_errors',0);
+
+//ini_set('display_errors',0);
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ($_POST['usr'] && $_POST['ou']){
-        $domini = 'dc=fjeclot,dc=net';
         $opcions = [
             'host' => 'zend-patulo.fjeclot.net',
-            'username' => "cn=admin,$domini",
+            'username' => "cn=admin,dc=fjeclot,dc=net",
             'password' => 'fjeclot',
             'bindRequiresDn' => true,
             'accountDomainName' => 'fjeclot.net',
@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         ];
         $ldap = new Ldap($opcions);
         $ldap->bind();
-        $entrada='uid='.$_GET['usr'].',ou='.$_GET['ou'].',dc=fjeclot,dc=net';
+        $entrada='uid='.$_POST['usr'].',ou='.$_POST['ou'].',dc=fjeclot,dc=net';
         $usuari=$ldap->getEntry($entrada);
         echo "<b><u>".$usuari["dn"]."</b></u><br>";
         foreach ($usuari as $atribut => $dada) {
