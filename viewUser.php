@@ -2,23 +2,25 @@
 require 'vendor/autoload.php';
 use Laminas\Ldap\Ldap;
 ini_set('display_errors',0);
-if ($_GET['usr'] && $_GET['ou']){
-    $domini = 'dc=fjeclot,dc=net';
-    $opcions = [
-        'host' => 'zend-patulo.fjeclot.net',
-        'username' => "cn=admin,$domini",
-        'password' => 'fjeclot',
-        'bindRequiresDn' => true,
-        'accountDomainName' => 'fjeclot.net',
-        'baseDn' => 'dc=fjeclot,dc=net',
-    ];
-    $ldap = new Ldap($opcions);
-    $ldap->bind();
-    $entrada='uid='.$_GET['usr'].',ou='.$_GET['ou'].',dc=fjeclot,dc=net';
-    $usuari=$ldap->getEntry($entrada);
-    echo "<b><u>".$usuari["dn"]."</b></u><br>";
-    foreach ($usuari as $atribut => $dada) {
-        if ($atribut != "dn") echo $atribut.": ".$dada[0].'<br>';
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if ($_POST['usr'] && $_POST['ou']){
+        $domini = 'dc=fjeclot,dc=net';
+        $opcions = [
+            'host' => 'zend-patulo.fjeclot.net',
+            'username' => "cn=admin,$domini",
+            'password' => 'fjeclot',
+            'bindRequiresDn' => true,
+            'accountDomainName' => 'fjeclot.net',
+            'baseDn' => 'dc=fjeclot,dc=net',
+        ];
+        $ldap = new Ldap($opcions);
+        $ldap->bind();
+        $entrada='uid='.$_GET['usr'].',ou='.$_GET['ou'].',dc=fjeclot,dc=net';
+        $usuari=$ldap->getEntry($entrada);
+        echo "<b><u>".$usuari["dn"]."</b></u><br>";
+        foreach ($usuari as $atribut => $dada) {
+            if ($atribut != "dn") echo $atribut.": ".$dada[0].'<br>';
+        }
     }
 }
 ?>
@@ -30,11 +32,12 @@ if ($_GET['usr'] && $_GET['ou']){
     </head>
     <body>
         <h2>Formulari de selecció d'usuari</h2>
-        <form action="http://zend-patulo.fjeclot.net/zendldap" method="GET">
+        <form action="http://zend-patulo.fjeclot.net/zendldap" method="POST">
             Unitat organitzativa: <input type="text" name="ou"><br>
             Usuari: <input type="text" name="usr"><br>
             <input type="submit"/>
             <input type="reset"/>
         </form>
+        <a href="http://zend-patulo.fjeclot.net/autent/menu.php">Torna a la pàgina inicial</a>
     </body>
 </html>
