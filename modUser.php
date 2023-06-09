@@ -45,9 +45,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	<body>
 		<form action="http://zend-patulo.fjeclot.net/projecte/modUser.php" method="POST">
             <label for="uid">UID:</label>
-            <input type="text" name="uid" id="uid" class="form-control" required><br>
+            <input type="text" name="uid" id="uid" required><br>
             <label for="unorg">Unidad Organizativa:</label>
-            <input type="text" name="unorg" id="unorg" class="form-control" required><br>
+            <input type="text" name="unorg" id="unorg" required><br>
             <label>Atributo a modificar:</label><br>
             <input type="radio" id="uidNumber" name="atribut" value="uidNumber" required>
             <label for="uidNumber">uidNumber</label><br>
@@ -74,8 +74,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <input type="radio" id="description" name="atribut" value="description">
             <label for="description">description</label><br>
             <label for="nou_contingut">Nuevo valor:</label>
-            <input type="text" name="nou_contingut" id="nou_contingut" class="form-control" required>
-            <input type="submit" value="Modificar Usuario" class="btn btn-primary">
+            <input type="text" name="nou_contingut" id="nou_contingut" required>
+            <input type="submit" value="Modificar Usuario">
         </form>
         <a href="http://zend-patulo.fjeclot.net/projecte/menu.php">Torna a la pàgina inicial</a>
 	</body>
