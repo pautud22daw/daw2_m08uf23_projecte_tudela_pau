@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 <html>
     <head>
         <title>
-        	MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP
+        	Veure Usuari
         </title>
     </head>
     <body>

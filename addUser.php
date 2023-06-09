@@ -24,10 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $descripcio = $_POST['descripcio'];
             $objcl = array('inetOrgPerson', 'organizationalPerson', 'person', 'posixAccount', 'shadowAccount', 'top');
             
-            $domini = 'dc=fjeclot,dc=net';
             $opcions = [
                 'host' => 'zend-patulo.fjeclot.net',
-                'username' => "cn=admin,$domini",
+                'username' => "cn=admin,dc=fjeclot,dc=net",
                 'password' => 'fjeclot',
                 'bindRequiresDn' => true,
                 'accountDomainName' => 'fjeclot.net',

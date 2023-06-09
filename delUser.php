@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-use Laminas\Ldap\Attribute;
 use Laminas\Ldap\Ldap;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -30,10 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<form action="http://zend-patulo.fjeclot.net/projecte/delUser.php" method="POST">
-    <label for="uid">UID:</label>
-    <input type="text" name="uid" id="uid" required>
-    <label for="unorg">Unidad Organizativa:</label>
-    <input type="text" name="unorg" id="unorg" required>
-    <input type="submit" value="Eliminar Usuario">
-</form>
+<html>
+	<head>
+		<title>
+			Esborrar Usuari
+		</title>
+	</head>
+	<body>
+    	<form action="http://zend-patulo.fjeclot.net/projecte/delUser.php" method="POST">
+            <label for="uid">UID:</label>
+            <input type="text" name="uid" id="uid" required><br>
+            <label for="unorg">Unidad Organizativa:</label>
+            <input type="text" name="unorg" id="unorg" required>
+            <input type="submit" value="Eliminar Usuario">
+        </form>
+        <a href="http://zend-patulo.fjeclot.net/projecte/menu.php">Torna a la pàgina inicial</a>
+	</body>
+</html>
