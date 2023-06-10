@@ -70,35 +70,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	</head>
 	<body>
 		<form action="http://zend-patulo.fjeclot.net/projecte/addUser.php" method="POST">
-			 <label for="uid">UID:</label>
-             <input type="text" name="uid" id="uid" required><br>
-             <label for="unorg">Unitat organitzativa:</label>
-             <input type="text" name="unorg" id="unorg" required><br>
-             <label for="num_id">ID:</label>
-             <input type="number" name="num_id" id="num_id" required><br>
-             <label for="grup">Grup:</label>
-             <input type="number" name="grup" id="grup" required><br>
-             <label for="dir_pers">Directori Personal:</label>
-             <input type="text" name="dir_pers" id="dir_pers" required><br>
-             <label for="sh">Shell:</label>
-             <input type="text" name="sh" id="sh" required><br>
-             <label for="cn">Nom Complet (CN):</label>
-             <input type="text" name="cn" id="cn" required><br>
-             <label for="sn">Cognom (SN):</label>
-             <input type="text" name="sn" id="sn" required><br>
-             <label for="nom">Nom (Given Name):</label>
-             <input type="text" name="nom" id="nom" required><br>
-             <label for="mobil">Mobil:</label>
-             <input type="text" name="mobil" id="mobil" required><br>
-             <label for="adressa">Direccio Postal:</label>
-			 <input type="text" name="adressa" id="adressa" required><br>
-			 <label for="telefon">Telefon:</label>
-             <input type="text" name="telefon" id="telefon" required><br>
-             <label for="titol">Titol:</label>
-             <input type="text" name="titol" id="titol" required><br>
-             <label for="descripcio">Descripción:</label>
-             <input type="text" name="descripcio" id="descripcio" required><br>
-             <input type="submit" value="Crear Usuari">
+			<label for="uid">UID:</label>
+			<input type="text" name="uid" id="uid" required><br>
+			<label for="unorg">Unitat organitzativa:</label>
+			<input type="text" name="unorg" id="unorg" required><br>
+			<label for="num_id">ID:</label>
+			<input type="number" name="num_id" id="num_id" required><br>
+			<label for="grup">Grup:</label>
+			<input type="number" name="grup" id="grup" required><br>
+			<label for="dir_pers">Directori Personal:</label>
+			<input type="text" name="dir_pers" id="dir_pers" required><br>
+			<label for="sh">Shell:</label>
+			<input type="text" name="sh" id="sh" required><br>
+			<label for="cn">Nom Complet (CN):</label>
+			<input type="text" name="cn" id="cn" required><br>
+			<label for="sn">Cognom (SN):</label>
+			<input type="text" name="sn" id="sn" required><br>
+			<label for="nom">Nom (Given Name):</label>
+			<input type="text" name="nom" id="nom" required><br>
+			<label for="mobil">Mobil:</label>
+			<input type="text" name="mobil" id="mobil" required><br>
+			<label for="adressa">Direccio Postal:</label>
+			<input type="text" name="adressa" id="adressa" required><br>
+			<label for="telefon">Telefon:</label>
+			<input type="text" name="telefon" id="telefon" required><br>
+			<label for="titol">Titol:</label>
+			<input type="text" name="titol" id="titol" required><br>
+			<label for="descripcio">Descripción:</label>
+			<input type="text" name="descripcio" id="descripcio" required><br>
+			<input type="submit" value="Crear Usuari">
 		</form>
 		<a href="http://zend-patulo.fjeclot.net/projecte/menu.php">Torna a la pàgina inicial</a>
 	</body>
